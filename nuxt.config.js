@@ -28,7 +28,8 @@ module.exports = {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    'swiper/dist/css/swiper.css'
+    'swiper/dist/idangerous.swiper.css'
+    // 'swiper/dist/css/swiper.css'
   ],
 
   /*
