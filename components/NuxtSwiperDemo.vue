@@ -1,12 +1,12 @@
 <template>
   <!-- You can find this swiper instance object in current component by the "mySwiper"  -->
-  <div v-swiper:mySwiper="swiperOption">
+  <div class="my-swiper" v-swiper:mySwiper="swiperOption">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(banner, key) in banners" :key="key">
         <img :src="banner">
       </div>
     </div>
-    <div class="swiper-pagination swiper-pagination-bullets"></div>
+    <div class="swiper-pagination"></div>
   </div>
 </template>
 
@@ -22,41 +22,20 @@ export default {
       ],
       swiperOption: {
         loop: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true
-        },
-        on: {
-          slideChange() {
-            console.log('onSlideChangeEnd', this)
-          },
-          tap() {
-            console.log('onTap', this)
-          }
+        spaceBetween: 0,
+        pagination: '.swiper-pagination',
+        onSlideChangeStart() {
+          console.log('on slide change start')
         }
       }
     }
-  },
-  mounted() {
-    console.log('app init', this)
-    setTimeout(() => {
-      this.banners.push('/5.jpg')
-      console.log('banners update')
-    }, 3000)
-    console.log(
-      'This is current swiper instance object', this.mySwiper,
-      'I will slideTo banners 3')
-    this.mySwiper.slideTo(3)
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .my-swiper {
-  height: 300px;
+  height: 500px;
   width: 100%;
 
   .swiper-slide {
@@ -67,12 +46,28 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+      height: 654px;
+    }
   }
 
   .swiper-pagination {
-
-    > .swiper-pagination-bullet {
-      background-color: red;
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    &-switch  {
+      height: 10px;
+      width: 10px;
+      border-radius: 5px;
+      background-color: gray;
+      display: inline-block;
+      margin-right: 10px;
+      &.swiper-active-switch {
+        background-color: red;
+      }
     }
   }
 }
