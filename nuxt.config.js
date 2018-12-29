@@ -71,6 +71,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    // 单独提取 css
+    extractCSS: true
   }
 }

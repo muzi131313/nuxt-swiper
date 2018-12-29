@@ -19,7 +19,7 @@
     "express": "^4.16.3",
     "nuxt": "^2.0.0",
     "swiper": "^2.7.6",
-    "vue-swiper-2.x": "^1.0.1"
+    "vue-swiper-2.x": "^1.0.2"
   },
   "devDependencies": {
     "@vue/eslint-config-standard": "^4.0.0",
