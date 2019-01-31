@@ -27,10 +27,22 @@
 import Logo from '~/components/Logo.vue'
 import NuxtSwiperDemo from '~/components/NuxtSwiperDemo.vue'
 
+import { mapGetters } from 'vuex'
+
 export default {
   components: {
     Logo,
     NuxtSwiperDemo
+  },
+  computed: {
+    ...mapGetters({
+      'isMobile': 'option/isMobile'
+    })
+  },
+  async fetch({ store }) {
+    const option = store.state.option || {}
+    const isMobile = option.isMobile
+    console.log('fetch() isMobile: ', isMobile)
   }
 }
 </script>

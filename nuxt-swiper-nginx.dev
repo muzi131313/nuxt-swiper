@@ -1,0 +1,12 @@
+server {
+  listen       3032;
+  #域名
+
+  server_name  localhost;
+
+  location /  {
+    #node.js应用的端口
+    proxy_pass http://127.0.0.1:3000;
+    root /;
+  }
+}
