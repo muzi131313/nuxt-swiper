@@ -18,7 +18,7 @@
     "element-ui": "^2.4.6",
     "express": "^4.16.3",
     "nuxt": "^2.3.4",
-    "swiper": "^2.7.6",
+    "swiper": "^6.5.1",
     "vue-swiper-2.x": "^1.0.2"
   },
   "devDependencies": {
