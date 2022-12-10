@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.0.0",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.6",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "nuxt": "^2.3.4",
     "swiper": "^2.7.6",
     "vue-swiper-2.x": "^1.0.2"
